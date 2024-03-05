@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FnatyUUID</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="png/ixo/phonto.ico">
+</head>
+<header>
+
+</header>
+<body>
+    <div class="bg"></div>
+    <div class="container">
+        <img src="png/phonto.png" width="30%">
+        <div class="pis"></div>
+        <div id="uuid"></div>
+        <button onclick="generateUUID()">GENERAT</button>
+        <a href="https://discord.gg/W6pVRxqWqc">DISCORD</a>
+    </div>
+    <script>
+        function generateUUID() {
+        const uuid = uuidv4();
+        document.getElementById('uuid').innerText = uuid;
+    }
+
+    function uuidv4() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random() * 16 | 0,
+        v = c == 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+    });
+    }
+</script>
+</body>
+</html>
